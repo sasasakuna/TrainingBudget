@@ -1,0 +1,27 @@
+#container {
+border-color: #d1d1d1;
+width: auto;
+border: none;
+color: #5e5e5e;
+
+
+border-style: none solid solid solid;
+border-width: 1px;
+border-bottom-right-radius: 8px;
+border-bottom-left-radius: 8px;
+
+
+margin: 0 auto;
+
+
+}
+
+#subcontainer{
+
+margin: 100px auto 0;
+padding: 30px;
+width: 492px;
+border-radius: 6px;
+border-width: 1px;
+border-style: solid;
+}
