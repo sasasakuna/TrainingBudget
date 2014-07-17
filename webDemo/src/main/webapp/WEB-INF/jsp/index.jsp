@@ -56,10 +56,13 @@
         div input#start {
             width:170px;
             height:40px;
-            margin-left:40px;
+            margin-left:70px;
             margin-top:70px;
-            padding:0;
-            }
+            box-sizing: content-box;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size:55;
+        }
 
 
     </style>

@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=utf-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 
 <head>
@@ -48,9 +49,53 @@
 
     <div id="wrap">
         <div id="logo"></div>
-       <!-- <div id="nav"></div>-->
-        <div id="main">
+      <!-- <div id="nav">
 
+       </div>-->
+        <div id="main">
+            <table class="queryResult">
+                <thead>
+                <tr>
+                    <th>EmployeeID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Cost</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                    <c:forEach var="record" items="${allRecords}">
+                        <tr>
+                            <td>${record.id}</td>
+                            <td>${record.name}</td>
+                            <td>${record.type}</td>
+                            <td>${record.cost}</td>
+                        </tr>
+
+                    </c:forEach>
+
+                    <script type="text/javascript">
+                    var trs = $("tbody tr");
+                    trs.sort(function(a,b){
+                       //var aValue = $(a).find('td:last-child').text();
+                        var aValue = $(a).find('td:nth-child(4)').text();
+                        var bValue = $(b).find('td:last-child').text();
+                        //console.log(aValue, bValue);
+
+                        return +aValue < +bValue;
+                    });
+
+                    trs.each(function(idx,tr){
+                        $('table tbody').append(tr);
+                    });
+                    </script>
+
+
+                </tbody>
+
+
+
+            </table>
         </div>
 
         <div id="footer"><p>ThoughtWorks Chengdu Office</p></div>
