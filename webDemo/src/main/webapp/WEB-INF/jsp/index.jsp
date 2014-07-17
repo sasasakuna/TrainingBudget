@@ -3,7 +3,6 @@
 
 <head>
     <title>TrainingBudget</title>
-    <meta http-equiv="Content-Type" content="text/html charset=utf-8">
     <style type="text/css">
         body,
         html {
@@ -62,6 +61,8 @@
             border-radius: 10px;
             cursor: pointer;
             font-size:55;
+            background-color:white;
+            border:1px solid black;
         }
 
 
@@ -70,7 +71,9 @@
 <body>
 
     <div id="wrap">
-        <div id="logo"></div>
+        <div id="logo">
+
+        </div>
        <!-- <div id="nav"></div>-->
         <div id="main">
             <form action="tbQuery" method="post">

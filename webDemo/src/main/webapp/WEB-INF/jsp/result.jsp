@@ -3,8 +3,10 @@
 <html>
 
 <head>
-    <title>TrainingBudget</title>
+    <meta charset="utf-8">
+    <title>TrainingBudget Query Results</title>
     <meta http-equiv="Content-Type" content="text/html charset=utf-8">
+
     <style type="text/css">
         body,
         html {
