@@ -6,8 +6,9 @@
 <head>
     <meta charset="utf-8">
     <title>TrainingBudget Query Results</title>
+    <script type="text/javascript" src="jquery.1.10.2.min.js"></script>
     <meta http-equiv="Content-Type" content="text/html charset=utf-8">
-
+    <link rel="stylesheet" href="bootstrap.min.css">
     <style type="text/css">
         body,
         html {
@@ -52,11 +53,9 @@
 
     <div id="wrap">
         <div id="logo"></div>
-      <!-- <div id="nav">
 
-       </div>-->
         <div id="main">
-            <table class="queryResult">
+            <table class="table">
                 <thead>
                 <tr>
                     <th>EmployeeID</th>
@@ -103,7 +102,7 @@
             </table>
 
              <div class="totalBudget">
-                        <p> 总经费：${totalBudget} RMB</p>
+                        <p>总经费：${totalBudget} RMB</p>
                     </div>
                     <div class="balance">
                         <p>可用余额：${balance} RMB</p>
