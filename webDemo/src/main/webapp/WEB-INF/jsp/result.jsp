@@ -101,11 +101,16 @@
 
 
             </table>
+
+             <div class="totalBudget">
+                        <p> 总经费：${totalBudget} RMB</p>
+                    </div>
+                    <div class="balance">
+                        <p>可用余额：${balance} RMB</p>
+                    </div>
         </div>
 
-        <div class="balance">
 
-        </div>
 
         <div id="footer"><p>ThoughtWorks Chengdu Office</p></div>
     </div>

@@ -34,6 +34,8 @@ public class MainController {
         List<Expense> expenseList = dataService.getExpenseByID(empl_id);
         expenseList = dataService.filterExpenseByCond(new String[]{"Books","Training/Education"}, expenseList);
 
+        model.addAttribute("totalBudget", new TotalBudget().getTotalBudget(empl_id));
+        model.addAttribute("balance",new Balance().getBalance(empl_id));
 
         model.addAttribute("expenseRecords", expenseList);
 

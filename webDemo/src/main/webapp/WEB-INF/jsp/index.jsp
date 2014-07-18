@@ -10,10 +10,11 @@
         padding:0;
         color:#000;
         background:white;
+        text-align:center;
         }
         div#wrap {
 
-        width:750px;
+        width:350px;
         margin:0 auto;
         }
         div#logo {
@@ -26,7 +27,7 @@
         }
         div#main {
          float:left;
-         width:750px;
+         width:100%;
          height:480px;
          background:#efefef;
         }
@@ -41,21 +42,18 @@
 
 
         form p {
-        text-align:left
-        font-size:62px;
-        margin-left:40px;
+        font-size:24px;
+        font-weight:bold;
         margin-top:70px;
         }
         input#id,input#name {
-            width:270px;
+            width:75%;
             height:40px;
-            margin-left:40px;
             font-size:35px;
         }
         div input#start {
             width:170px;
             height:40px;
-            margin-left:70px;
             margin-top:70px;
             box-sizing: content-box;
             border-radius: 10px;
@@ -64,7 +62,11 @@
             background-color:white;
             border:1px solid black;
         }
+    #logo img {
+        margin-top:10%;
+        vertical-align:center;
 
+    }
 
     </style>
 </head>
@@ -72,7 +74,7 @@
 
     <div id="wrap">
         <div id="logo">
-
+            <img src='images/logo.png'/>
         </div>
        <!-- <div id="nav"></div>-->
         <div id="main">
