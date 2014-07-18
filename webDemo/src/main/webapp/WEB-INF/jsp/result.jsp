@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=utf-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <html>
 
 <head>
@@ -60,18 +61,20 @@
                 <tr>
                     <th>EmployeeID</th>
                     <th>Name</th>
-                    <th>Type</th>
-                    <th>Cost</th>
+                    <th>Expense_Date</th>
+                    <th>Expense_Type</th>
+                    <th>Cost_in_Home_Currency</th>
                 </tr>
                 </thead>
 
                 <tbody>
-                    <c:forEach var="record" items="${allRecords}">
+                    <c:forEach var="record" items="${expenseRecords}">
                         <tr>
-                            <td>${record.id}</td>
+                            <td>${record.empl_ID}</td>
                             <td>${record.name}</td>
-                            <td>${record.type}</td>
-                            <td>${record.cost}</td>
+                            <td>${record.expense_Date}</td>
+                            <td>${record.expense_Type}</td>
+                            <td>${record.cost_in_Home_Currency}</td>
                         </tr>
 
                     </c:forEach>
@@ -98,6 +101,10 @@
 
 
             </table>
+        </div>
+
+        <div class="balance">
+
         </div>
 
         <div id="footer"><p>ThoughtWorks Chengdu Office</p></div>

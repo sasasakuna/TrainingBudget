@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by hjli on 7/16/14.
@@ -24,16 +25,17 @@ public class MainController {
         return "index";
     }
 
+
     @RequestMapping(value = "/tbQuery", method = RequestMethod.POST)
     public String add(HttpServletRequest request, HttpServletResponse response, ModelMap model){
 
-        ArrayList<Record> allRecords = new ArrayList<Record>();
-        allRecords.add(new Record("1","name1","meals","150"));
-        allRecords.add(new Record("1","name1","meals","150"));
-        allRecords.add(new Record("1","name1","meals","150"));
-        allRecords.add(new Record("1","name1","meals","150"));
+        String empl_id = request.getParameter("id");
+        DataService dataService = new DataService();
+        List<Expense> expenseList = dataService.getExpenseByID(empl_id);
+        expenseList = dataService.filterExpenseByCond(new String[]{"Books","Training/Education"}, expenseList);
 
-        model.addAttribute("allRecords", allRecords);
+
+        model.addAttribute("expenseRecords", expenseList);
 
         return "result";
 

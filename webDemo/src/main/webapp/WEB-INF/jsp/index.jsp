@@ -77,8 +77,7 @@
        <!-- <div id="nav"></div>-->
         <div id="main">
             <form action="tbQuery" method="post">
-                <p>UserName</p>
-                <input type="text" name="name" id="name"/>
+
                 <p>EmployeeID</p>
                 <input type="text" name="id" id="id"/>
                 <div>
