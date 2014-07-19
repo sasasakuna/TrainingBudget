@@ -9,13 +9,7 @@ public class Expense {
     public String name;
     public String cost_in_Home_Currency;
 
-    public String getExpense_Date() {
-        return expense_Date;
-    }
 
-    public void setExpense_Date(String expense_Date) {
-        this.expense_Date = expense_Date;
-    }
 
     public String getEmpl_ID() {
         return empl_ID;
@@ -33,11 +27,10 @@ public class Expense {
         this.name = name;
     }
 
-    public Expense(String empl_ID, String name, String cost_in_Home_Currency, String expense_Date, String expense_Type) {
+    public Expense(String empl_ID, String name, String cost_in_Home_Currency, String expense_Type) {
         this.empl_ID = empl_ID;
         this.name = name;
         this.cost_in_Home_Currency = cost_in_Home_Currency;
-        this.expense_Date = expense_Date;
         this.expense_Type = expense_Type;
     }
 
@@ -57,7 +50,6 @@ public class Expense {
         this.expense_Type = expense_Type;
     }
 
-    public String expense_Date;
     public String expense_Type;
 
     @Override
@@ -66,7 +58,6 @@ public class Expense {
                 "Empl_ID='" + empl_ID + '\'' +
                 ", Name='" + name + '\'' +
                 ", Cost_in_Home_Currency='" + cost_in_Home_Currency + '\'' +
-                ", Expense_Date='" + expense_Date + '\'' +
                 ", Expense_Type='" + expense_Type + '\'' +
                 '}';
     }

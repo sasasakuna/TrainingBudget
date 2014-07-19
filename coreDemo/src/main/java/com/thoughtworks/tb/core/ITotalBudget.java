@@ -5,5 +5,5 @@ package com.thoughtworks.tb.core;
  */
 public interface ITotalBudget {
 
-    public int getTotalBudget(String ID);
+    public int getTotalBudget();
 }

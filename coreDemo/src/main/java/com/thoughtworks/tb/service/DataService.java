@@ -1,6 +1,5 @@
 package com.thoughtworks.tb.service;
 
-import com.thoughtworks.tb.ExpenseService;
 import com.thoughtworks.tb.model.Expense;
 
 import java.util.List;
@@ -24,9 +23,10 @@ public class DataService {
         return expenseService.filterExpenseByCond(conds, expenses);
     }
 
-    public float getTw_years_of_EXP(String ID){
-
-
-        return 0;
+    public boolean isEmployeeExist(String cond){
+        ConsultantService consultantService = new ConsultantService();
+        return  consultantService.isEmployeeExist(cond);
     }
+
+
 }

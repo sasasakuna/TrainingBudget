@@ -1,6 +1,5 @@
 package com.thoughtworks.tb.core;
 
-import com.thoughtworks.tb.core.ITotalBudget;
 import com.thoughtworks.tb.service.ConsultantService;
 
 import java.util.Calendar;
@@ -9,8 +8,18 @@ import java.util.Calendar;
  * Created by hjli on 7/18/14.
  */
 public class TotalBudget implements ITotalBudget {
+
+    public TotalBudget(String cond) {
+        this.cond = cond;
+    }
+
+    public String cond;
+
+
     @Override
-    public int getTotalBudget(String ID) {
+    public int getTotalBudget() {
+
+        String ID = cond;
         int totalBudget = 2000;
         ConsultantService consultantService = new ConsultantService();
         float workedYears = consultantService.getTw_years_of_EXP(ID);

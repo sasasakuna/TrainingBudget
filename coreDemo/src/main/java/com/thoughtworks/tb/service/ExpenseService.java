@@ -21,7 +21,7 @@ public class ExpenseService {
         Expense expense = null;
         Connection con = DataDao.getConnection();
         Statement statement = DataDao.getStatement(con);
-        String userSql = "select Empl_ID, Name, Cost_in_Home_Currency, Expense_Date, Expense_Type from expense where Empl_ID regexp '" + ID + "$';"; //查询用户信息
+        String userSql = "select Empl_ID, Name, Cost_in_Home_Currency, Expense_Type from expense where Empl_ID = '" + ID + "';"; //查询用户信息
         ResultSet expenseRS = DataDao.getRs(statement, userSql);
 
 
@@ -34,7 +34,6 @@ public class ExpenseService {
                     expense = new Expense(expenseRS.getString("Empl_ID"),
                             expenseRS.getString("Name"),
                             expenseRS.getString("Cost_in_Home_Currency"),
-                            expenseRS.getString("Expense_Date"),
                             expenseRS.getString("Expense_Type"));
                     expensesList.add(expense);
 
@@ -42,15 +41,21 @@ public class ExpenseService {
 
                 }
 
-                expenseRS.close();
-                statement.close();
-                con.close();
+
             } catch (SQLException e) {
                 e.printStackTrace();
             }
 
 
         }
+        try {
+            expenseRS.close();
+            statement.close();
+            con.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         return expensesList;
     }
 
@@ -65,10 +70,6 @@ public class ExpenseService {
                     filteredExpenses.add(expense);
             }
         }
-
-
-
-
 
         if (filteredExpenses.size()!=0)
             return filteredExpenses;

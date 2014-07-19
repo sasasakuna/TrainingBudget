@@ -24,7 +24,6 @@
                 <tr>
                     <th>EmployeeID</th>
                     <th>Name</th>
-                    <th>Expense_Date</th>
                     <th>Expense_Type</th>
                     <th>Cost_in_Home_Currency</th>
                 </tr>
@@ -35,7 +34,6 @@
                         <tr>
                             <td>${record.empl_ID}</td>
                             <td>${record.name}</td>
-                            <td>${record.expense_Date}</td>
                             <td>${record.expense_Type}</td>
                             <td>${record.cost_in_Home_Currency}</td>
                         </tr>

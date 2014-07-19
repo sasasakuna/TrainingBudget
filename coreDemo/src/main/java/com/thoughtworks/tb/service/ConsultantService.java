@@ -14,7 +14,8 @@ public class ConsultantService {
 
     public float getTw_years_of_EXP(String ID){
 
-        String empl_id = getEmplid_From_ID(ID);
+        String temp = new String(ID);
+        String empl_id = temp.replaceAll("\\D+", "");
         String result = null;
 
         Connection con = DataDao.getConnection();
@@ -46,8 +47,27 @@ public class ConsultantService {
             return 0f;
     }
 
-    public String getEmplid_From_ID(String ID) {
-        String temp = new String(ID);
-        return temp.replaceAll("\\D+","");
+    public boolean isEmployeeExist(String cond){
+        boolean isExist = true;
+        String empl_id = cond.replaceAll("\\D+","");
+        Connection con = DataDao.getConnection();
+        Statement statement = DataDao.getStatement(con);
+        //查询用户信息
+        String userSql = "select Employee_ID from consultant where Employee_ID = '" + empl_id + "';";
+        ResultSet expenseRS = DataDao.getRs(statement, userSql);
+
+        try {
+            if(!expenseRS.next()){
+                isExist = false;
+            }
+
+            expenseRS.close();
+            statement.close();
+            con.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return  isExist;
     }
+
 }

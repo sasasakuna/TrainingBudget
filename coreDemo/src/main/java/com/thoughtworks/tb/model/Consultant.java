@@ -13,7 +13,7 @@ public class Consultant {
     }
 
     public void setEmployee_ID(String employee_ID) {
-        employee_ID = employee_ID;
+        this.employee_ID = employee_ID;
     }
 
     public String getName() {
@@ -21,7 +21,7 @@ public class Consultant {
     }
 
     public void setName(String name) {
-         name = name;
+         this.name = name;
     }
 
     public String getTW_Years_of_EXP() {

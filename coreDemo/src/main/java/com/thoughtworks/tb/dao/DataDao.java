@@ -1,5 +1,10 @@
 package com.thoughtworks.tb.dao;
 
+
+
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabase;
+import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
+
 import java.sql.*;
 
 /**
@@ -12,6 +17,7 @@ public class DataDao {
     private final static String DB_URL = "jdbc:mysql://localhost:3306/trainingbudget";
     private final static String DB_NAME = "root";
     private final static String DB_PWd = "";
+    private static EmbeddedDatabase db = new EmbeddedDatabaseBuilder().addDefaultScripts().build();
 
     static {
         try {
@@ -24,7 +30,14 @@ public class DataDao {
     public static Connection getConnection() {
         Connection conn = null;
         try {
-            conn = DriverManager.getConnection(DB_URL, DB_NAME, DB_PWd);
+         /*// 使用本地数据库
+            conn = DriverManager.getConnection(DB_URL, DB_NAME, DB_PWd);*/
+
+            //使用内存数据库
+            conn = db.getConnection();
+
+
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -91,3 +104,5 @@ public class DataDao {
         }
     }
 }
+
+
