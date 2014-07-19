@@ -1,11 +1,14 @@
-package com.thoughtworks.tb;
+package com.thoughtworks.tb.core;
+
+import com.thoughtworks.tb.core.ITotalBudget;
+import com.thoughtworks.tb.service.ConsultantService;
 
 import java.util.Calendar;
 
 /**
  * Created by hjli on 7/18/14.
  */
-public class TotalBudget implements ITotalBalance{
+public class TotalBudget implements ITotalBudget {
     @Override
     public int getTotalBudget(String ID) {
         int totalBudget = 2000;
@@ -14,20 +17,16 @@ public class TotalBudget implements ITotalBalance{
 
         int workedMonths = (int)Math.ceil(workedYears * 12);
 
-        System.out.println(workedMonths);
-
         Calendar cal = Calendar.getInstance();
-        int year = cal.get(Calendar.YEAR);
         int month = cal.get(Calendar.MONTH )+1;
 
-        //System.out.println(year + " 年 " + month + " 月");
 
         int startedWorkedMonth = month - workedMonths + 1;
 
         //当年入职
         if(startedWorkedMonth>0){
             int monthToDecember = 12 - startedWorkedMonth + 1;
-            totalBudget = (10 * 2000)/12;
+            totalBudget = (monthToDecember * 2000)/12;
 
         }
 

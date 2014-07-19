@@ -9,44 +9,8 @@
     <script type="text/javascript" src="jquery.1.10.2.min.js"></script>
     <meta http-equiv="Content-Type" content="text/html charset=utf-8">
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="result.css"/>
     <style type="text/css">
-        body,
-        html {
-        margin:0;
-        padding:0;
-        color:#000;
-        background:white;
-        }
-        #wrap {
-
-        width:750px;
-        margin:0 auto;
-        }
-        #logo {
-         padding:5px 10px;
-         height:100px;
-        }
-        #nav {
-         padding:5px 10px;
-         height:30px;
-        }
-        #main {
-         float:left;
-         width:750px;
-         height:480px;
-         background:#efefef;
-        }
-
-        #footer {
-         clear:both;
-        }
-
-        #footer p {
-         text-align:center;
-        }
-
-
-
     </style>
 </head>
 <body>

@@ -1,0 +1,34 @@
+body,
+html {
+margin:0;
+padding:0;
+color:#000;
+background:white;
+}
+#wrap {
+
+width:750px;
+margin:0 auto;
+}
+#logo {
+ padding:5px 10px;
+ height:100px;
+}
+#nav {
+ padding:5px 10px;
+ height:30px;
+}
+#main {
+ float:left;
+ width:750px;
+ height:480px;
+ background:#efefef;
+}
+
+#footer {
+ clear:both;
+}
+
+#footer p {
+ text-align:center;
+}

@@ -1,4 +1,4 @@
-package com.thoughtworks.tb;
+package com.thoughtworks.tb.core;
 
 /**
  * Created by hjli on 7/18/14.

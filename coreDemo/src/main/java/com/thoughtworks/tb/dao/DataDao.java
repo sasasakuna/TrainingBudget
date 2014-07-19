@@ -1,4 +1,4 @@
-package com.thoughtworks.tb;
+package com.thoughtworks.tb.dao;
 
 import java.sql.*;
 
