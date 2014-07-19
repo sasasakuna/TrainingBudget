@@ -19,8 +19,14 @@
 
                 <p>EmployeeID</p>
                 <input type="text" name="id" id="id"/>
-                <p>${status}</p>
+                <p>
+                <%
+                    String status = (String)request.getAttribute("status");
+                    if(status!=null)
+                        out.println(status);
 
+                %>
+                <p>
 
                 <div>
                     <input type="submit" id = "start" name = "start" value="Query"/>

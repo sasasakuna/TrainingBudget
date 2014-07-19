@@ -39,13 +39,12 @@ public class MainController {
 
             model.addAttribute("totalBudget", trainingBudget.getTotalBudget());
             model.addAttribute("balance",trainingBudget.getBalance());
-            model.addAttribute("status","");
-
+            request.setAttribute("stauts",null);
 
             return "result";
         }
         else{
-            model.addAttribute("status","用户名不存在");
+            request.setAttribute("status","用户名不存在");
             return "index";
         }
 
