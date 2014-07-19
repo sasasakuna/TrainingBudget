@@ -39,7 +39,7 @@ public class MainController {
 
             model.addAttribute("totalBudget", trainingBudget.getTotalBudget());
             model.addAttribute("balance",trainingBudget.getBalance());
-            model.addAttribute("status",null);
+            model.addAttribute("status","");
 
 
             return "result";
